@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const reseñaSchema = new mongoose.Schema({
+const resenaSchema = new mongoose.Schema({
   clienteId: { type: mongoose.Schema.Types.ObjectId, ref: 'Usuario', required: true },
   expertoId: { type: mongoose.Schema.Types.ObjectId, ref: 'Experto', required: true },
   solicitudId: { type: mongoose.Schema.Types.ObjectId, ref: 'Solicitud' },
@@ -9,4 +9,4 @@ const reseñaSchema = new mongoose.Schema({
   fecha: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Reseña', reseñaSchema);
+module.exports = mongoose.model('Resena', resenaSchema);
